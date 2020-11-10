@@ -1,0 +1,16 @@
+<div class="container">
+  <h2><%= @task.title  %></h2>
+  <p><%= @task.details %></p>
+  <div class="task_completed">
+    <% if @task.completed %>
+      <img src="https://static.thenounproject.com/png/192276-200.png" alt="" class="checkbox_icon">
+      <p>This task is completed</p>
+    <% else %>
+      <img src="https://image.flaticon.com/icons/png/512/25/25235.png" alt="" class="checkbox_icon">
+      <p>This task isn't completed yet</p>
+    <% end %>
+  </div>
+  <%= link_to 'Edit this task', edit_task_path %>
+  <%= link_to 'Delete this task', task_path(@task), method: :delete, data: {confirm: "Are you sure?"} %>
+  <%= link_to 'Back to my tasks', '/tasks' %>
+</div>

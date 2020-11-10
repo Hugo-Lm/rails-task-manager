@@ -1,0 +1,19 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "bootstrap/scss/bootstrap";
+
+
+.container {
+  width: 400px;
+  margin: 20px auto;
+}
+
+.checkbox_icon {
+  width:20px;
+  height: 20px;
+}
+
+.task_completed {
+  display: flex;
+}

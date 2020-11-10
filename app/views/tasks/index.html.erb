@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>My tasks</h1>
+  <% @tasks.each do |t| %>
+    <div class="task">
+      <% if t.completed %>
+        <img src="https://static.thenounproject.com/png/192276-200.png" alt="" class="checkbox_icon">
+      <% else %>
+        <img src="https://image.flaticon.com/icons/png/512/25/25235.png" alt="" class="checkbox_icon">
+      <% end %>
+      <%= link_to t.title, task_path(t.id) %>
+    </div>
+  <% end %>
+  <%= link_to 'Create a new task', new_task_path %>
+</div>
